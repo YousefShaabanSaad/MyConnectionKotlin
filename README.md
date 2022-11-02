@@ -41,7 +41,7 @@ Step 3. In Activity
 			super.onCreate(savedInstanceState)
 			setContentView(R.layout.activity_main)
 
-                        //تعريف الكلاس
+                      //تعريف الكلاس
 			val myConnectionKt = MyConnectionKt(this)
 			
 			 // لو تريد فحص الإتصال بالإنترنت
