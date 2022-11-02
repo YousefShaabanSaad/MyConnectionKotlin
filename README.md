@@ -41,16 +41,16 @@ Step 3. In Activity
 			super.onCreate(savedInstanceState)
 			setContentView(R.layout.activity_main)
 
-                      //تعريف الكلاس
+                    //تعريف الكلاس
 			val myConnectionKt = MyConnectionKt(this)
 			
-			 // لو تريد فحص الإتصال بالإنترنت
+	             // لو تريد فحص الإتصال بالإنترنت
 			if(myConnectionKt.isConnect()){
 			    // internet connection
 			    Toast.makeText(this, "internet connection", Toast.LENGTH_SHORT).show()
 			}
 			
-                        // لو تريد فحص عدم الإتصال بالإنترنت
+                      // لو تريد فحص عدم الإتصال بالإنترنت
 			if(myConnectionKt.isDisconnect()) {
 			    // internet disconnect
 			    // لكي يتم عرض رسالة عدم الإتصال
