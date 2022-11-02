@@ -50,7 +50,6 @@ Step 3. In Activity
 			    Toast.makeText(this, "internet connection", Toast.LENGTH_SHORT).show()
 			}
 			
-
                         // لو تريد فحص عدم الإتصال بالإنترنت
 			if(myConnectionKt.isDisconnect()) {
 			    // internet disconnect
