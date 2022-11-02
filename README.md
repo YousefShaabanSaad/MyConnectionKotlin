@@ -44,7 +44,7 @@ Step 3. In Activity
                     //تعريف الكلاس
 			val myConnectionKt = MyConnectionKt(this)
 			
-    	          // لو تريد فحص الإتصال بالإنترنت
+    	                // لو تريد فحص الإتصال بالإنترنت 
 			if(myConnectionKt.isConnect()){
 			    // internet connection
 			    Toast.makeText(this, "internet connection", Toast.LENGTH_SHORT).show()
