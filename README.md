@@ -29,35 +29,29 @@ Or  Add it in your root settings.gradle :
 Step 2. Add the dependency
 
 	dependencies {
-	         implementation 'com.github.YousefShaabanSaad:MyConnection:1.0.0'
+		 implementation 'com.github.YousefShaabanSaad:MyConnectionKotlin:1.0.0'
 	}
 
 Step 3. In Activity
 
-	public class MainActivity extends AppCompatActivity {
-		 
-		 @Override
-		 protected void onCreate(Bundle savedInstanceState) {
-		        super.onCreate(savedInstanceState);
-			setContentView(R.layout.activity_main);
-			
-			 ...
-			//تعريف الكلاس
-			MyConnection myConnection = new MyConnection(this);
-      
-		        // لو تريد فحص الإتصال بالإنترنت
-			if(myConnection.isConnect()){
+
+        class MainActivity : AppCompatActivity() {
+        	override 
+		fun onCreate(savedInstanceState: Bundle?) {
+			super.onCreate(savedInstanceState)
+			setContentView(R.layout.activity_main)
+
+			val myConnectionKt = MyConnectionKt(this)
+			if(myConnectionKt.isConnect()){
 			    // internet connection
-			    Toast.makeText(this, "internet connection", Toast.LENGTH_SHORT).show();
+			    Toast.makeText(this, "internet connection", Toast.LENGTH_SHORT).show()
 			}
 
-		        // لو تريد فحص عدم الإتصال بالإنترنت
-			if(myConnection.isDisconnect()) {
+			if(myConnectionKt.isDisconnect()) {
 			    // internet disconnect
-			    // لكي يتم عرض رسالة عدم الإتصال
-			    myConnection.showDisconnectDialog();
+			    myConnectionKt.showDisconnectDialog()
 			}
-		  }
+	    }
 	}
 
 
